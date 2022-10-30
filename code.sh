@@ -23,7 +23,7 @@ sudo adduser alessioscarlet chrome-remote-desktop
 printf "\nSetup Complete \nCreated new user alessioscarlet with password:scarlet \nYou can change both alessioscarlet's password with passwd(with no sudo) \nOr you can change root's password with sudo passwd" >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless and copy command of Debian Linux \n'
-read -p "Paste Here: " CRP
+read -p ""%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0ARtbsJrtBmMTq0JApj3Xd9yTp0EJ6xAZ-OLF8-G0wg-APuMgXa1KYTGlGRnsp8G0mnTs1w" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=%COMPUTERNAME%: " CRP
 su - alessioscarlet -c """$CRP"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
